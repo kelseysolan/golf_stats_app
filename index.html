@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Golf Stats</title>
+		<link type="text/css" rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" href="themes/green1.min.css"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	
+	<body>
+		<div data-role="page" id="one">
+			<center><h1><span></span>My Golf Stats<h1></center>
+			<br>
+			<center><img src="golf.png"></center>
+
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#two" data-icon="bars">My Rounds</a></li>
+						<li><a href="#five" data-icon="bars">Courses</a></li>
+						<li><a href="#eight" data-icon="grid">Stats</a></li>
+						<li><a href="#seven" data-icon="edit">Notes</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div><!-- page 1 -->
+		
+		<div data-role="page" id="two">
+			<div data-role="header">
+				<a href="#one" data-theme="c" data-transition="fade" data-role="button" data-inline="true" data-mini="true" data-icon="home" data-iconpos="notext" data-theme="a">Home</a>
+				<h2>Rounds</h2>
+				<a href="#three" data-theme="c" data-transition="fade" data-role="button" data-inline="true" data-mini="true" data-icon="plus">New Round</a>
+			</div>
+			
+			<ul data-role="listview" data-inset="false">
+    			<li data-role="list-divider">Sunday, April 21, 2013</li>
+    			<li><a>
+        			<h2>Club Championship</h2>
+       				<p>Burlington Country Club</p>
+    			</a></li>
+    			<li data-role="list-divider">Monday, April 22, 2013</li>
+    			<li><a>
+        			<h2>Club Championship</h2>
+       				<p>Burlington Country Club</p>
+    			</a></li>
+       		<ul>
+       		
+       		<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#two" data-icon="bars">My Rounds</a></li>
+						<li><a href="#five" data-icon="bars">Courses</a></li>
+						<li><a href="#seven" data-icon="grid">Stats</a></li>
+						<li><a href="#eight" data-icon="edit">Notes</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 2 -->
+		
+		<div data-role="page" id="three">
+			<div data-role="header">
+				<a href="#two" data-theme="c" data-transition="slidedown">Cancel</a>
+				<h2>New Round</h2>
+				<a href="#two" data-theme="c" data-transition="fade">Save</a>
+			</div>
+			
+			<ul data-role="listview" data-theme="c" data-inset="true">
+				<li>Course
+					<label for="coursename"></label>
+					<input type="search" name="coursename" id="coursename" value="" data-mini="true"/>
+				</li>
+				<li>Tees
+					<label for="select-choice-mini" class="select"> </label>
+					<select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true" data-native-menu="false">
+  						<option value="black">Black</option>
+   						<option value="blue">Blue</option>
+   						<option value="white">White</option>
+   						<option value="silver">Silver</option>
+   						<option value="green">Green</option>
+					</select>
+				</li>
+				<li>Date<form action='' name='date'>
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">	
+     					<select name='month' size='1' id='month'>
+         					<option value='January'>January</option>
+         					<option value='February'>February</option>
+         					<option value='March'>March</option>
+         					<option value='April' selected>April</option>
+         					<option value='May'>May</option>
+         					<option value='June'>June</option>
+         					<option value='July'>July</option>
+         					<option value='August'>August</option>
+         					<option value='September'>September</option>
+         					<option value='October'>October</option>
+         					<option value='November'>November</option>
+         					<option value='December'>December</option>
+         				</select>
+         				<select name='day' id='day'>
+							<option value='1' >1</option>
+							<option value='2' >2</option>
+							<option value='3' >3</option>
+							<option value='4' >4</option>
+							<option value='5' >5</option>
+							<option value='6' >6</option>
+							<option value='7' >7</option>
+							<option value='8' >8</option>
+							<option value='9' >9</option>
+							<option value='10' >10</option>
+							<option value='11' >11</option>
+							<option value='12' >12</option>
+							<option value='13' >13</option>
+							<option value='14' >14</option>
+							<option value='15' >15</option>
+							<option value='16' >16</option>
+							<option value='17' >17</option>
+							<option value='18' >18</option>
+							<option value='19' >19</option>
+							<option value='20' >20</option>
+							<option value='21' selected>21</option>
+							<option value='22' >22</option>
+							<option value='23' >23</option>
+							<option value='24' >24</option>
+							<option value='25' >25</option>
+							<option value='26' >26</option>
+							<option value='27' >27</option>
+							<option value='28' >28</option>
+							<option value='29' >29</option>
+							<option value='30' >30</option>
+							<option value='31' >31</option>
+         				</select>
+         				<select name='year' id='year'>
+         					<option value='2011'>2011</option>
+         					<option value='2012'>2012</option>
+         					<option value='2013' selected>2013</option>
+         				</select>
+         		</li>
+			</ul>
+			<br>
+			<ul data-role="listview" data-theme="c" data-inset="true">	
+				<li>Temperature
+					<label for="temperature"></label>
+					<input type="text" name="temp" id="temp" value="" data-mini="true"/></li>
+				<li>Wind
+					<label for="select-choice-mini" class="select"> </label>
+					<select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true" data-native-menu="false">
+  						<option value="none">None</option>
+   						<option value="light">Light</option>
+   						<option value="medium">Medium</option>
+   						<option value="strong">Strong</option>
+					</select>
+				</li>
+				<li>Round Type
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-b" id="tournament" value="choice-1" checked="checked"/>
+         			<label for="tournament">Tournament</label>
+         			
+         			<input type="radio" name="radio-choice-b" id="practice" value="choice-2"/>
+         			<label for="practice">Practice</label>
+   				</fieldset>
+   				
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="18holes" value="choice-1" checked="checked"/>
+         			<label for="18holes">18 Holes</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="front" value="choice-2"/>
+         			<label for="front">Front 9</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="back" value="choice-3"/>
+         			<label for="back">Back 9</label>
+   				</fieldset>
+   				</li>
+			</ul>
+			<br>
+			<ul data-role="listview" data-theme="c" data-inset="true">
+				<li><a href="#nine">Round Details</a></li>
+			</ul>
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#two" data-icon="bars">My Rounds</a></li>
+						<li><a href="#five" data-icon="bars">Courses</a></li>
+						<li><a href="#seven" data-icon="grid">Stats</a></li>
+						<li><a href="#eight" data-icon="edit">Notes</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 3 -->
+		
+		<div data-role="page" id="four">
+			<div data-role="header">
+				<a href="#two" data-theme="c">Back</a>
+				<h2></h2>
+			</div>
+		
+			<label for="coursename">Course Name:</label>
+			<input type="search" name="coursename" id="coursename" value=""/>
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#two" data-icon="bars">My Rounds</a></li>
+						<li><a href="#five" data-icon="bars">Courses</a></li>
+						<li><a href="#seven" data-icon="grid">Stats</a></li>
+						<li><a href="#eight" data-icon="edit">Notes</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 4 -->
+			
+		<div data-role="page" id="five">
+			<div data-role="header">
+				<h2>Courses</h2>
+				<a href="#one" data-theme="c" data-transition="fade" class="ui-btn-right" data-role="button" data-inline="true" data-mini="true" data-icon="plus" data-iconpos="notext" data-theme="a">New</a>
+			</div>
+			
+			<ul data-role="listview" data-theme="c" data-autodividers="true">
+				<li><a>Burlington Country Club</a></li>
+				<li><a>Lakeview Golf Club</a><li>
+			</ul>
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#two" data-icon="bars">My Rounds</a></li>
+						<li><a href="#five" data-icon="bars">Courses</a></li>
+						<li><a href="#seven" data-icon="grid">Stats</a></li>
+						<li><a href="#eight" data-icon="edit">Notes</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 5 -->
+		
+		<div data-role="page" id="six">
+			
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#two" data-icon="bars">My Rounds</a></li>
+						<li><a href="#five" data-icon="bars">Courses</a></li>
+						<li><a href="#seven" data-icon="grid">Stats</a></li>
+						<li><a href="#eight" data-icon="edit">Notes</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 6 -->
+		
+		<div data-role="page" id="seven">
+		
+		//STATS HERE
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#two" data-icon="bars">My Rounds</a></li>
+						<li><a href="#five" data-icon="bars">Courses</a></li>
+						<li><a href="#seven" data-icon="grid">Stats</a></li>
+						<li><a href="#eight" data-icon="edit">Notes</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 7 -->
+		
+		<div data-role="page" id="eight">
+			<div data-role="header">
+				<h2></h2>
+				<a href="#one" data-theme="c" data-transition="fade" class="ui-btn-right" data-role="button" data-inline="true" data-mini="true" data-icon="plus" data-iconpos="notext" data-theme="a">New</a>
+			</div>
+			
+			<ul data-role="listview" data-theme="c">
+				<li><a>GHIN Number</a></li>
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#two" data-icon="bars">My Rounds</a></li>
+						<li><a href="#five" data-icon="bars">Courses</a></li>
+						<li><a href="#seven" data-icon="grid">Stats</a></li>
+						<li><a href="#eight" data-icon="edit">Notes</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 8 -->
+		
+		<div data-role="page" id="nine">
+			<div data-role="header">
+				<a href="#three" data-theme="c" data-transition="slidedown">Back</a>
+				<h2>Round Details</h2>
+				<a href="#three" data-theme="c" data-transition="fade">Save</a>
+			</div>
+		
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#ten">Hole 1</a></li>
+				<li><a href="#eleven">Hole 2</a></li>
+    			<li><a href="#">Hole 3</a></li>
+    			<li><a href="#">Hole 4</a></li>
+   				<li><a href="#">Hole 5</a></li>
+   				<li><a href="#">Hole 6</a></li>
+				<li><a href="#">Hole 7</a></li>
+    			<li><a href="#">Hole 8</a></li>
+    			<li><a href="#">Hole 9</a></li>
+   				<li><a href="#">Hole 10</a></li>
+   				<li><a href="#">Hole 11</a></li>
+				<li><a href="#">Hole 12</a></li>
+    			<li><a href="#">Hole 13</a></li>
+    			<li><a href="#">Hole 14</a></li>
+   				<li><a href="#">Hole 15</a></li>
+   				<li><a href="#">Hole 16</a></li>
+    			<li><a href="#">Hole 17</a></li>
+   				<li><a href="#">Hole 18</a></li>
+			</ul>
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#two" data-icon="bars">My Rounds</a></li>
+						<li><a href="#five" data-icon="bars">Courses</a></li>
+						<li><a href="#seven" data-icon="grid">Stats</a></li>
+						<li><a href="#eight" data-icon="edit">Notes</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 9 -->
+		
+		<div data-role="page" id="ten"><!-- Hole 1 -->
+			<div data-role="header">
+				<a href="#nine" data-theme="c" data-transition="slidedown">Cancel</a>
+				<h2>Hole 1</h2>
+				<a href="#nine" data-theme="c" data-transition="fade">Save</a>
+			</div>
+			
+			<ul data-role="listview" data-theme="c" data-inset="true">	
+				<li>Score
+					<input name="number" pattern="[0-15]*" id="number-pattern" value="" type="number">
+				</li>
+				<li>Fairway
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="hit" value="choice-1"/>
+         			<label for="hit">Hit</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="right" value="choice-2"/>
+         			<label for="right">Missed Right</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="left" value="choice-3"/>
+         			<label for="left">Missed Left</label>
+   				</fieldset>
+   				</li>
+   				<li>Putts
+					<input name="number" pattern="[0-15]*" id="number-pattern" value="" type="number">
+				</li>
+				<li>GIR<br>
+					<select name="flip-mini" id="flip-mini" data-role="slider" >
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select>
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="30" value="choice-1"/>
+         			<label for="30">Inside 30'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="15" value="choice-2"/>
+         			<label for="15">Inside 15'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="hit" value="choice-3"/>
+         			<label for="hit">Hit</label>
+   					</fieldset>
+   					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="short" value="choice-1"/>
+         			<label for="short">Short</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="long" value="choice-2"/>
+         			<label for="long">Long</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="right" value="choice-3"/>
+         			<label for="right">Right</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="left" value="choice-3"/>
+         			<label for="left">Left</label>
+   					</fieldset>
+				</li>
+				<li>Up & Down
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="successful" value="choice-1"/>
+         			<label for="successful">Successful</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="unsuccessful" value="choice-2"/>
+         			<label for="unsuccessful">Unsuccessful</label>
+   					</fieldset>
+   					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="30" value="choice-1"/>
+         			<label for="30">Inside 10'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="15" value="choice-2"/>
+         			<label for="15">Inside 5'</label>
+   					</fieldset>
+   				</li>
+   				<li>Sand Save
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="successful" value="choice-1"/>
+         			<label for="successful">Successful</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="unsuccessful" value="choice-2"/>
+         			<label for="unsuccessful">Unsuccessful</label>
+   					</fieldset>
+   					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="30" value="choice-1"/>
+         			<label for="30">Inside 10'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="15" value="choice-2"/>
+         			<label for="15">Inside 5'</label>
+   					</fieldset>
+   				</li>
+			</ul>
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" data-icon="arrow-l" class="ui-disabled">Previous Hole</a></li>
+						<li><a href="#eleven" data-icon="arrow-r">Next Hole</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 10 -->
+		
+		<div data-role="page" id="eleven"><!-- Hole 2 -->
+			<div data-role="header">
+				<a href="#nine" data-theme="c" data-transition="slidedown">Cancel</a>
+				<h2>Hole 2</h2>
+				<a href="#nine" data-theme="c" data-transition="fade">Save</a>
+			</div>
+			
+			<ul data-role="listview" data-theme="c" data-inset="true">	
+				<li>Score
+					<input name="number" pattern="[0-15]*" id="number-pattern" value="" type="number">
+				</li>
+				<li>Fairway
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="hit" value="choice-1"/>
+         			<label for="hit">Hit</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="right" value="choice-2"/>
+         			<label for="right">Missed Right</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="left" value="choice-3"/>
+         			<label for="left">Missed Left</label>
+   				</fieldset>
+   				</li>
+   				<li>Putts
+					<input name="number" pattern="[0-15]*" id="number-pattern" value="" type="number">
+				</li>
+				<li>GIR<br>
+					<select name="flip-mini" id="flip-mini" data-role="slider" >
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select>
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="30" value="choice-1"/>
+         			<label for="30">Inside 30'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="15" value="choice-2"/>
+         			<label for="15">Inside 15'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="hit" value="choice-3"/>
+         			<label for="hit">Hit</label>
+   					</fieldset>
+   					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="short" value="choice-1"/>
+         			<label for="short">Short</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="long" value="choice-2"/>
+         			<label for="long">Long</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="right" value="choice-3"/>
+         			<label for="right">Right</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="left" value="choice-3"/>
+         			<label for="left">Left</label>
+   					</fieldset>
+				</li>
+				<li>Up & Down
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="successful" value="choice-1"/>
+         			<label for="successful">Successful</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="unsuccessful" value="choice-2"/>
+         			<label for="unsuccessful">Unsuccessful</label>
+   					</fieldset>
+   					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="30" value="choice-1"/>
+         			<label for="30">Inside 10'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="15" value="choice-2"/>
+         			<label for="15">Inside 5'</label>
+   					</fieldset>
+   				</li>
+   				<li>Sand Save
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="successful" value="choice-1"/>
+         			<label for="successful">Successful</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="unsuccessful" value="choice-2"/>
+         			<label for="unsuccessful">Unsuccessful</label>
+   					</fieldset>
+   					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="30" value="choice-1"/>
+         			<label for="30">Inside 10'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="15" value="choice-2"/>
+         			<label for="15">Inside 5'</label>
+   					</fieldset>
+   				</li>
+			</ul>
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#ten" data-icon="arrow-l">Previous Hole</a></li>
+						<li><a href="#twelve" data-icon="arrow-r">Next Hole</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 11 -->
+		
+		<div data-role="page" id="twelve"><!-- Hole 18 -->
+			<div data-role="header">
+				<a href="#nine" data-theme="c" data-transition="slidedown">Cancel</a>
+				<h2>Hole 18</h2>
+				<a href="#nine" data-theme="c" data-transition="fade">Save</a>
+			</div>
+			
+			<ul data-role="listview" data-theme="c" data-inset="true">	
+				<li>Score
+					<input name="number" pattern="[0-15]*" id="number-pattern" value="" type="number">
+				</li>
+				<li>Fairway
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="hit" value="choice-1"/>
+         			<label for="hit">Hit</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="right" value="choice-2"/>
+         			<label for="right">Missed Right</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="left" value="choice-3"/>
+         			<label for="left">Missed Left</label>
+   				</fieldset>
+   				</li>
+   				<li>Putts
+					<input name="number" pattern="[0-15]*" id="number-pattern" value="" type="number">
+				</li>
+				<li>GIR<br>
+					<select name="flip-mini" id="flip-mini" data-role="slider" >
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select>
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="30" value="choice-1"/>
+         			<label for="30">Inside 30'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="15" value="choice-2"/>
+         			<label for="15">Inside 15'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="hit" value="choice-3"/>
+         			<label for="hit">Hit</label>
+   					</fieldset>
+   					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="short" value="choice-1"/>
+         			<label for="short">Short</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="long" value="choice-2"/>
+         			<label for="long">Long</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="right" value="choice-3"/>
+         			<label for="right">Right</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="left" value="choice-3"/>
+         			<label for="left">Left</label>
+   					</fieldset>
+				</li>
+				<li>Up & Down
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="successful" value="choice-1"/>
+         			<label for="successful">Successful</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="unsuccessful" value="choice-2"/>
+         			<label for="unsuccessful">Unsuccessful</label>
+   					</fieldset>
+   					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="30" value="choice-1"/>
+         			<label for="30">Inside 10'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="15" value="choice-2"/>
+         			<label for="15">Inside 5'</label>
+   					</fieldset>
+   				</li>
+   				<li>Sand Save
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="successful" value="choice-1"/>
+         			<label for="successful">Successful</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="unsuccessful" value="choice-2"/>
+         			<label for="unsuccessful">Unsuccessful</label>
+   					</fieldset>
+   					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+         			<input type="radio" name="radio-choice-c" id="30" value="choice-1"/>
+         			<label for="30">Inside 10'</label>
+         			
+         			<input type="radio" name="radio-choice-c" id="15" value="choice-2"/>
+         			<label for="15">Inside 5'</label>
+   					</fieldset>
+   				</li>
+			</ul>
+			
+			<div data-role="footer" data-id="foo1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#eleven" data-icon="arrow-l">Previous Hole</a></li>
+						<li><a href="#nine" data-icon="arrow-r">Finish</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- page 12 -->
+	
+	</body>
+</html>
